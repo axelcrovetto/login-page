@@ -1,0 +1,26 @@
+<h5><u><i>Login Form using Angular material!!</i></u></h5>
+
+<div class="container">
+<form class="example-form">
+<form class="example-full-width" appearance="fill">
+<label>User Name</label>
+<input matInput placeholder="Enter your name" name="username" required
+[(ngModel)] ="username">
+</form>
+<form class="example-full-width" appearance="fill">
+<label>Password</label>
+<input matInput placeholder="Enter your password" value="" name="password" type="password" [(ngModel)]= "password" required>
+</form>
+ <button mat-raised-button type="submit" class="btn btn-primary mb-2" (click)="submit()">Confirm identity</button>
+<span *ngIf="show">
+  <button mat-button color="accent" class="button">Login success !!</button>
+<div class="alert alert-success" role="alert" *ngIf="correct">
+  Accesso consentito!
+</div>
+
+</span>
+<div class="alert alert-danger" role="alert" *ngIf="!correct">
+  Accesso negato!
+</div>
+</form>
+
