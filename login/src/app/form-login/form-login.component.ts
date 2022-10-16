@@ -15,19 +15,18 @@ export class FormLoginComponent implements OnInit {
 
   correctUsername ="aaaa"
   correctPassword = "1111"
-  show = false;
   correct = false;
+  showModal=false;
 
   constructor() { }
 
   submit(){
     if(this.username == this.correctUsername && this.password == this.correctPassword){
       console.log("user name is " +this.username)
-      this.show = true;
       this.correct = true;
-    }
-    else{
-      this.show = false;
+      this.emptyAll()
+    }else{
+      this.showModal=true;
     }
   }
 
@@ -35,7 +34,7 @@ export class FormLoginComponent implements OnInit {
   emptyAll(){
     this.username = "";
     this.password = "";
-    this.show = false;
+    this.showModal = false;
   }
 
   ngOnInit(): void {

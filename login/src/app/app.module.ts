@@ -6,8 +6,8 @@ import { FormLoginComponent } from './form-login/form-login.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
-import { MatSliderModule } from '@angular/material/slider';
 import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -15,9 +15,7 @@ import { FormsModule } from '@angular/forms';
     FormLoginComponent
   ],
   imports: [
-    MatSliderModule,
     BrowserModule,
-    BrowserAnimationsModule,
     FormsModule
   ],
   providers: [{provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {floatLabel: 'always'}}],

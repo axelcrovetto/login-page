@@ -1,26 +1,32 @@
 <h5><u><i>Login Form using Angular material!!</i></u></h5>
 
-<div class="container">
-<form class="example-form">
-<form class="example-full-width" appearance="fill">
-<label>User Name</label>
-<input matInput placeholder="Enter your name" name="username" required
-[(ngModel)] ="username">
-</form>
-<form class="example-full-width" appearance="fill">
-<label>Password</label>
-<input matInput placeholder="Enter your password" value="" name="password" type="password" [(ngModel)]= "password" required>
-</form>
- <button mat-raised-button type="submit" class="btn btn-primary mb-2" (click)="submit()">Confirm identity</button>
-<span *ngIf="show">
-  <button mat-button color="accent" class="button">Login success !!</button>
-<div class="alert alert-success" role="alert" *ngIf="correct">
-  Accesso consentito!
-</div>
+<div class="wrapper">
+        <div class="logo">
+            <img src="assets/grapher.jpg" alt="">
+        </div>
+        <div class="text-center mt-4 name">
+            Angular login
+        </div>
+    <form class="p-3 mt-3">
+            <div class="form-field d-flex align-items-center">
+                <span class="far fa-user"></span>
+                <input type="text" name="userName" id="userName" placeholder="Username" required [(ngModel)] ="username">
+            </div>
+            <div class="form-field d-flex align-items-center">
+                <span class="fas fa-key"></span>
+                <input type="password" name="password" id="pwd" value="" placeholder="Password" [(ngModel)]= "password" required>
+            </div>
+            <div>
+              <button class="btn mt-3" (click)="submit()">Login</button>
+              <div *ngIf="showModal" class="alert alert-danger" role="alert" aria-errormessage="username"> Accesso negato!</div>
 
-</span>
-<div class="alert alert-danger" role="alert" *ngIf="!correct">
-  Accesso negato!
-</div>
-</form>
+            </div>
 
+
+
+    </form>
+         <div class="text-center fs-6">
+            <a href="#">Forget password?</a> or <a href="#">Sign up</a>
+        </div>
+
+</div>
